@@ -7,6 +7,7 @@
     "angular-simple-logger": ">=0.0.1",
     "lodash": "3.X - 4.X"
   },
+
   "ignore": [
     "*.json",
     ".gitignore",
