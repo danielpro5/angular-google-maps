@@ -3877,7 +3877,7 @@ Original idea from: http://stackoverflow.com/questions/22758950/google-map-drawi
                 if ((ref = _this.opts) != null) {
                   ref.content = void 0;
                 }
-                wasOpen = _this.gObject.isOpen();
+                wasOpen = _this.gObject.isOpen;
                 _this.remove();
                 return _this.createGWin(wasOpen);
               }
@@ -3936,7 +3936,8 @@ Original idea from: http://stackoverflow.com/questions/22758950/google-map-drawi
             }
             this.gObject.setContent(this.opts.content);
             this.handleClick(((ref = this.scope) != null ? (ref1 = ref.options) != null ? ref1.forceClick : void 0 : void 0) || isOpen);
-            return this.doShow(this.gObject.isOpen());
+            //return this.doShow(this.gObject.isOpen());
+            return this.doShow(this.gObject.isOpen);
           }
         };
 
@@ -4022,7 +4023,7 @@ Original idea from: http://stackoverflow.com/questions/22758950/google-map-drawi
           show = (function(_this) {
             return function() {
               var isOpen, maybeMarker, pos;
-              if (!_this.gObject.isOpen()) {
+              if (!_this.gObject.isOpen) {
                 maybeMarker = _this.getGmarker();
                 if ((_this.gObject != null) && (_this.gObject.getPosition != null)) {
                   pos = _this.gObject.getPosition();
@@ -4034,7 +4035,7 @@ Original idea from: http://stackoverflow.com/questions/22758950/google-map-drawi
                   return;
                 }
                 _this.gObject.open(_this.gMap, maybeMarker);
-                isOpen = _this.gObject.isOpen();
+                isOpen = _this.gObject.isOpen;
                 if (_this.model.show !== isOpen) {
                   return _this.model.show = isOpen;
                 }
@@ -4073,7 +4074,7 @@ Original idea from: http://stackoverflow.com/questions/22758950/google-map-drawi
         };
 
         WindowChildModel.prototype.hideWindow = function() {
-          if ((this.gObject != null) && this.gObject.isOpen()) {
+          if ((this.gObject != null) && this.gObject.isOpen) {
             return this.gObject.close();
           }
         };
